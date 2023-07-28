@@ -1,0 +1,31 @@
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\appsettings.Development.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\appsettings.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.staticwebassets.runtime.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.exe
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.deps.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.runtimeconfig.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.dll
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\bin\Debug\net6.0\HRApplication 1.0.pdb
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.csproj.AssemblyReference.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.GeneratedMSBuildEditorConfig.editorconfig
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.AssemblyInfoInputs.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.AssemblyInfo.cs
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.csproj.CoreCompileInputs.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.MvcApplicationPartsAssemblyInfo.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.RazorAssemblyInfo.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.RazorAssemblyInfo.cs
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets\msbuild.HRApplication 1.0.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets\msbuild.build.HRApplication 1.0.props
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HRApplication 1.0.props
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HRApplication 1.0.props
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets.build.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\staticwebassets.development.json
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\scopedcss\bundle\HRApplication 1.0.styles.css
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\scopedcss\projectbundle\HRApplication 1.0.bundle.scp.css
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.dll
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\refint\HRApplication 1.0.dll
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.pdb
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\HRApplication 1.0.genruntimeconfig.cache
+D:\Resource\CvProj\HRApplication\HRApplication 1.0\obj\Debug\net6.0\ref\HRApplication 1.0.dll
