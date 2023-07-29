@@ -3,17 +3,18 @@ using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.IO;
+using System;
+using System.Collections.Generic;
+using Microsoft.ML;
+using Microsoft.ML.Data;
+using Microsoft.ML.Transforms.Text;
+using HRApplication_1._0.MlModel;
+using static System.Net.WebRequestMethods;
 
 namespace HRApplication_1._0.Pages
 {
     public class IndexModel : PageModel
     {
-        //private readonly ILogger<IndexModel> _logger;
-
-        //public IndexModel(ILogger<IndexModel> logger)
-        //{
-        //    _logger = logger;
-        //}
         private readonly IWebHostEnvironment _webHostEnvironment;
         public IndexModel(IWebHostEnvironment webHostEnvironment)
         {
@@ -21,46 +22,60 @@ namespace HRApplication_1._0.Pages
         }
         [BindProperty]
         public string PdfUrl { get; set; } = null;
+        public string[] filelist { get; set; }
+       
         public void OnGet()
         {
             
         }
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost(List<IFormFile> files)
         {
-            string appDir=Path.GetTempPath();
-            var file = Request.Form.Files["pdfFile"];
-            if (file != null && file.Length > 0)
+            List<DataModelClass.Profile> Profiles = new List<DataModelClass.Profile>();
+            string appDir = Path.GetTempPath();
+            string filePath = "";
+            //var file = Request.Form.Files["pdfFile"];
+            foreach (var temp in files)
             {
-                Stream blog = new MemoryStream();
-                blog = file.OpenReadStream();
-                byte[] resultByteArray = null;
-                using (MemoryStream memoryStream = new MemoryStream())
+                if (temp != null && temp.Length > 0)
                 {
-                    blog.CopyTo(memoryStream);
-                    resultByteArray= memoryStream.ToArray();
-                }
-                string filePath = "";
-                filePath = Path.Combine(Path.GetTempPath(), "fileImage.pdf");
-                try
-                {
-                    using (MemoryStream memoryStream = new MemoryStream(resultByteArray))
+
+                    Stream blog = new MemoryStream();
+                    blog = temp.OpenReadStream();
+                    byte[] resultByteArray = null;
+                    using (MemoryStream memoryStream = new MemoryStream())
                     {
-                        using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
-                        {
-                            memoryStream.WriteTo(fileStream);
-                        }
+                        blog.CopyTo(memoryStream);
+                        resultByteArray = memoryStream.ToArray();
                     }
 
-                    Console.WriteLine("PDF file created successfully!");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("There Is SomeThing Wrong");
+                    filePath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString() + ".pdf");
+                    try
+                    {
+                        using (MemoryStream memoryStream = new MemoryStream(resultByteArray))
+                        {
+                            using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                            {
+                                memoryStream.WriteTo(fileStream);
+                            }
+                        }
+
+                        Console.WriteLine("PDF file created successfully!");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("There Is SomeThing Wrong");
+                    }
                 }
                 PdfUrl = Url.Content(filePath);
+                DataModelClass.Profile ob = new DataModelClass.Profile();
+                ob.Name = Guid.NewGuid().ToString();
+                ob.Description = Guid.NewGuid().ToString();
+                ob.CV = PdfUrl;
+                Profiles.Add(ob);
             }
-
+            MLFunctions.InputMlModel(Profiles);
             return Page();
         }
+        
     }
 }
